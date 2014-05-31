@@ -8,7 +8,7 @@
 
 #import "AMListWindowController.h"
 
-@interface AMListWindowController ()
+@interface AMListWindowController ()<NSTableViewDataSource>
 @property(nonatomic, retain) AMProjectController* projectController;
 @end
 
@@ -28,6 +28,14 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
+	return 5;
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
+	
 }
 
 @end

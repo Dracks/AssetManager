@@ -13,7 +13,11 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AMAppDelegate"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="tz2-It-XJR" customClass="AMApplicationController"/>
+        <customObject id="tz2-It-XJR" customClass="AMApplicationController">
+            <connections>
+                <outlet property="recentMenuList" destination="oas-Oc-fiZ" id="OQ4-WW-hUO"/>
+            </connections>
+        </customObject>
         <customObject id="716-v1-t9J" customClass="AMProjectController"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -85,7 +89,7 @@
                                         <menuItem title="Clear Menu" id="vNY-rz-j42">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="clearRecentDocuments:" target="-1" id="Daa-9d-B3U"/>
+                                                <action selector="clearRecent:" target="tz2-It-XJR" id="Pfd-GU-3bo"/>
                                             </connections>
                                         </menuItem>
                                     </items>

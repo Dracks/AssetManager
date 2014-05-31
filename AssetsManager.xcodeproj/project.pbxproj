@@ -24,6 +24,8 @@
 		A45FF3CD1937B75A007D552E /* AMListWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45FF3CB1937B75A007D552E /* AMListWindowController.xib */; };
 		A45FF3D11937BC83007D552E /* AMAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FF3D01937BC83007D552E /* AMAsset.m */; };
 		A45FF3D61937BD60007D552E /* AMImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = A45FF3D51937BD60007D552E /* AMImageSize.m */; };
+		A4CB1AA9193910D200CA07F1 /* AMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CB1AA8193910D200CA07F1 /* AMPoint.m */; };
+		A4CB1AAC193911FF00CA07F1 /* AMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CB1AAB193911FF00CA07F1 /* AMUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,10 @@
 		A45FF3D21937BCE5007D552E /* AMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDefines.h; sourceTree = "<group>"; };
 		A45FF3D41937BD60007D552E /* AMImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMImageSize.h; sourceTree = "<group>"; };
 		A45FF3D51937BD60007D552E /* AMImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMImageSize.m; sourceTree = "<group>"; };
+		A4CB1AA7193910D200CA07F1 /* AMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPoint.h; sourceTree = "<group>"; };
+		A4CB1AA8193910D200CA07F1 /* AMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPoint.m; sourceTree = "<group>"; };
+		A4CB1AAA193911FF00CA07F1 /* AMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMUtils.h; sourceTree = "<group>"; };
+		A4CB1AAB193911FF00CA07F1 /* AMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,8 @@
 			children = (
 				A45FF3CF1937BC83007D552E /* AMAsset.h */,
 				A45FF3D01937BC83007D552E /* AMAsset.m */,
+				A4CB1AA7193910D200CA07F1 /* AMPoint.h */,
+				A4CB1AA8193910D200CA07F1 /* AMPoint.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +220,8 @@
 			children = (
 				A45FF3D41937BD60007D552E /* AMImageSize.h */,
 				A45FF3D51937BD60007D552E /* AMImageSize.m */,
+				A4CB1AAA193911FF00CA07F1 /* AMUtils.h */,
+				A4CB1AAB193911FF00CA07F1 /* AMUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,8 +330,10 @@
 				A45FF3961937B07F007D552E /* main.m in Sources */,
 				A45FF3D61937BD60007D552E /* AMImageSize.m in Sources */,
 				A45FF3C81937B6C3007D552E /* AMApplicationController.m in Sources */,
+				A4CB1AA9193910D200CA07F1 /* AMPoint.m in Sources */,
 				A45FF3CC1937B75A007D552E /* AMListWindowController.m in Sources */,
 				A45FF3D11937BC83007D552E /* AMAsset.m in Sources */,
+				A4CB1AAC193911FF00CA07F1 /* AMUtils.m in Sources */,
 				A45FF3BF1937B2E6007D552E /* AMProjectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +547,7 @@
 				A45FF3B91937B07F007D552E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A45FF3BA1937B07F007D552E /* Build configuration list for PBXNativeTarget "AssetsManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +556,7 @@
 				A45FF3BC1937B07F007D552E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

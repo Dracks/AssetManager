@@ -11,6 +11,7 @@
 
 @interface AMAsset : NSObject
 - (id)initWithDictionary: (NSDictionary*) dictionary;
+- (NSDictionary*) serialize;
 
 @property(nonatomic, retain)	NSString*		filepath;
 @property(nonatomic)			AMImageSize		size;

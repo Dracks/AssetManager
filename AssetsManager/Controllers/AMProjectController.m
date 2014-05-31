@@ -7,13 +7,14 @@
 //
 
 #import "AMProjectController.h"
+#import "AMListWindowController.h"
 #import "AMAsset.h"
 
 @interface AMProjectController ()
 @property(nonatomic, strong)	NSString*		filePath;
 @property(nonatomic, strong)	NSMutableArray*	contents;
-
 @end
+
 
 @implementation AMProjectController
 
@@ -42,14 +43,40 @@
 	}
 	return self;
 }
+
+- (void) openListWindow{
+	AMListWindowController* listController=[[AMListWindowController alloc] initWithProject:self];
+	[listController.window makeKeyAndOrderFront:self];
+	[listController showWindow:self];
+	[_delegate onOpenedWindow:[listController window]];
+}
+
 - (IBAction)closeProject:(id)sender {
 }
 - (IBAction)saveProject:(id)sender {
 	if (!_filePath){
 		[self saveAsProject:sender];
+	} else {
+		NSData* data=[self serialize];
+		[data writeToFile:_filePath atomically:YES];
 	}
 }
 - (IBAction)saveAsProject:(id)sender {
+	/* Select save as */
+	[_delegate onOpenedProject:_filePath];
+}
+
+- (NSData *)serialize{
+	NSError* err=nil;
+	NSMutableArray* copy=[[NSMutableArray alloc] init];
+	for (AMAsset* asset in _contents){
+		[copy addObject:[asset serialize]];
+	}
+	NSData* ret=[NSJSONSerialization dataWithJSONObject:copy options:NSJSONWritingPrettyPrinted error:&err];
+	if (err){
+		NSLog(@"Serialize with error: %@", err);
+	}
+	return ret;
 }
 
 @end

@@ -8,9 +8,18 @@
 
 @import Cocoa;
 
+@protocol AMProjectControllerDelegate <NSObject>
+
+- (void) onOpenedProject: (NSString*) project;
+- (void) onOpenedWindow: (NSWindow*) window;
+- (void) onCloseWindow: (NSWindow*) window;
+
+@end
+
 @interface AMProjectController : NSObjectController
 
+@property(nonatomic, weak) id<AMProjectControllerDelegate> delegate;
 - (id)initWithFile: (NSString*) file;
-
+- (void) openListWindow;
 - (NSData*) serialize;
 @end
